@@ -11,14 +11,14 @@ import { postArticleAPI } from "./redux/actions";
 
 const PostModal = (props) => {
   const [editorText, setEditorText] = useState("");
-  const [assetArea, setAssetArea] = useState("");// assetArea est une state  bech n5azen fih thouhour 3anaser
-  const [shareImage, setShareImage] = useState("");// shareImage bech n5azen fih url mta3 image
-  const [videoLink, setVideoLink] = useState("");// videoLink bech n5azen fih link mta3 video
+  const [assetArea, setAssetArea] = useState("");
+  const [shareImage, setShareImage] = useState("");
+  const [videoLink, setVideoLink] = useState("");
   const handleChange = (e) => {
-    const image = e.target.files[0];// howa soures mta3 image ou Ref ( Reference mta3 image ) njibouh men 5ilal input files men nwa3 type =file
+    const image = e.target.files[0];
 
     if (image === "" || image === undefined) {
-      alert(`not an image , the file is a ${typeof image}`);// typeof : t7adedlek naw3yet file howa chnowa & type= "file"
+      alert(`not an image , the file is a ${typeof image}`);
       return;
     } else {
       setShareImage(image);
